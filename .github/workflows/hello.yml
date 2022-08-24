@@ -10,10 +10,8 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Say hello
-        run: |
-          echo "Hello World!"
+        run: echo "Hello World!"
       - name: Print date
-        run: |
-          date
+        run: date
       - name: List files
-        run: ls -a
+        run: ls -l
