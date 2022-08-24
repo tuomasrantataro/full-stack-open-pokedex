@@ -7,7 +7,7 @@ on:
 
 jobs:
   deployment_pipeline:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v3
@@ -23,12 +23,11 @@ jobs:
       - name: test
         run: npm run test
       - name: e2e tests
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v4
         timeout-minutes: 5
         env:
           DEBUG: 'cypress:*'
         with:
-          browser: chrome
           command: "npm run test:e2e"
           start: "npm run start-prod"
           wait-on: "http://localhost:5000"
