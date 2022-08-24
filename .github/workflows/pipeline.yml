@@ -25,8 +25,6 @@ jobs:
       - name: e2e tests
         uses: cypress-io/github-action@v2
         timeout-minutes: 5
-        env:
-          DEBUG: 'cypress:*'
         with:
           command: "npm run test:e2e"
           start: "npm run start-prod"
