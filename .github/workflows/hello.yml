@@ -16,5 +16,4 @@ jobs:
         run: |
           date
       - name: List files
-        run: |
-          ll
+        run: ls -a
