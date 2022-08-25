@@ -37,3 +37,4 @@ jobs:
           heroku_email: "tuomas.rantataro@gmail.com"
           healthcheck: "https://polar-anchorage-73053.herokuapp.com/health"
           checkstring: "ok"
+          rollbackonhealthcheckfailed: true
