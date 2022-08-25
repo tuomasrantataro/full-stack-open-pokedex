@@ -1,1 +1,1 @@
-web: node app_nothere.js
+web: node app.js
