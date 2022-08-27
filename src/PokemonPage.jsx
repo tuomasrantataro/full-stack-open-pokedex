@@ -29,7 +29,6 @@ const PokemonPage = ({ previous, next }) => {
   //console.log('hiddenAbility:', hiddenAbility)
   // test line 1
   // test line 2
-  //
   return (
     <>
       <div className="links">
