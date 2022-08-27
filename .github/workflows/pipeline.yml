@@ -35,7 +35,7 @@ jobs:
       - name: deploy to heroku
         env:
           SKIP: ${{ contains(join(github.event.commits.*.message), '#skip') }}
-        if: ${{ github.event_name == 'push' && $SKIP == false}}
+        if: ${{ github.event_name == 'push' && '$SKIP' == false}}
         uses: AkhileshNS/heroku-deploy@v3.12.12
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
@@ -54,5 +54,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEFAULT_BUMP: patch
           SKIP: ${{ contains(join(github.event.commits.*.message), '#skip') }}
-        if: ${{ github.event_name == 'push' && $SKIP == false }}
+        if: ${{ github.event_name == 'push' && '$SKIP' == false }}
         uses: anothrNick/github-tag-action@1.36.0
